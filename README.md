@@ -54,11 +54,14 @@ Machine-local Codex session defaults live under `.codex/` and are not tracked.
 | Piece | Role |
 | --- | --- |
 | [xbrd-spark](https://github.com/VeigaPunk/xbrd-spark) | L3 binary (`sekhmet` / `xbrd-spark`); global **64** concurrent runners |
+| [sekhmet-l3](https://github.com/VeigaPunk/sekhmet-l3) | Public L3 usage + GATE evidence (luna + `service_tier=fast`; `STATUS.md`) |
 | [xbgst](https://github.com/VeigaPunk/xbgst) | Grok-native Godspeed host stack (judge concurrency 16; L3 remains 64) |
 | [xbgst-site](https://github.com/VeigaPunk/xbgst-site) | Public xbgst hub · [https://veigapunk.github.io/xbgst-site/](https://veigapunk.github.io/xbgst-site/) · [repo](https://github.com/VeigaPunk/xbgst-site) |
 | [ds4cc-marketplace](https://github.com/VeigaPunk/ds4cc-marketplace) | Plugin catalog (`sekhmet`, godspeed-core, xbrd-*, myagents, …) |
 | [xbrd-selector](https://github.com/VeigaPunk/xbrd-selector) | Pure-Rust rover / model selector CLI |
 | [xbrd-grok](https://github.com/VeigaPunk/xbrd-grok) | Design lineage for planner-first multi-round Godspeed |
+
+**Note:** Codex Code Mode host is optional for this skill. L3 execution is **sekhmet** only (`features.code_mode_host` may be false).
 
 ## Design lineage
 
