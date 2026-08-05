@@ -42,8 +42,12 @@ Aliases: `xbsu`, `sol-ultra-godspeed`. Never spawn another `xbsu`.
 ## Package
 
 - `SKILL.md` — full orchestration procedure and safety contract (authoritative)
+- `.agents/skills/xbrd-sol-ultra` — Codex discovery symlink → package root (tracks with git)
+- `AGENTS.md` — repo orchestration defaults and portable checks
 - `agents/openai.yaml` — display metadata and default invocation
 - `assets/icon.svg` — skill icon
+
+Machine-local Codex session defaults live under `.codex/` and are not tracked.
 
 ## Related stack
 
