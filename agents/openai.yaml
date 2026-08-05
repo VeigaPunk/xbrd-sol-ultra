@@ -1,0 +1,14 @@
+interface:
+  display_name: XBRD Sol Ultra
+  short_description: Sol Ultra judge with Sekhmet L3 x64
+  default_prompt: Use $xbrd-sol-ultra to run this task autonomously through Sol Ultra
+    and Sekhmet L3 x64.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
