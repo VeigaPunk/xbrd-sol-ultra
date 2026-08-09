@@ -1,0 +1,6 @@
+.xbgst/
+.codex/
+target/
+**/target/
+*.swp
+.DS_Store

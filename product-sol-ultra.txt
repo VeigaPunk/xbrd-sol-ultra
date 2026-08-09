@@ -1,0 +1,43 @@
+# product-sol-ultra — discovery layout ship
+
+goal: Verify and ship xbrd-sol-ultra discovery layout if untracked .agents + AGENTS.md are correct for Codex skill discovery.
+axes: clarity, ship_readiness, accuracy
+status: done
+sha: aae560fde06656dc74fd136c9e57a6d250594121
+remote: origin/main (b7357ae..aae560f)
+
+## Map
+
+| path | role | action |
+| --- | --- | --- |
+| SKILL.md | canonical skill (tracked) | keep sole body |
+| .agents/skills/xbrd-sol-ultra | symlink → ../.. (Codex discovery) | git add (mode 120000) |
+| AGENTS.md | repo orchestration + checks | polish + add |
+| .codex/config.toml | machine-local model/concurrency | skip (untracked) |
+| agents/openai.yaml, assets/ | package metadata (tracked) | unchanged |
+
+## Coherence
+
+- Discovery path exists: test -f .agents/skills/xbrd-sol-ultra/SKILL.md → OK
+- Symlink target: /home/vgpnk1337/Projects/xbrd-sol-ultra (package root)
+- Host skill list resolves Absolute path: …/.agents/skills/xbrd-sol-ultra/SKILL.md
+- No second SKILL copy under .agents
+- Absolute /home/vgpnk1337 removed from AGENTS.md → ${CODEX_HOME:-$HOME/.codex}/…
+- No secrets in staged paths
+- sekhmet --version → 0.1.1
+- quick_validate.py: fail env (ModuleNotFoundError: yaml) — not a package defect
+
+## Diff summary
+
+.agents/skills/xbrd-sol-ultra | symlink ../..
+AGENTS.md | portable discovery + checks
+README.md | document .agents + AGENTS; note .codex untracked
+
+## PARK
+
+none
+
+evidence: |
+  pre: untracked .agents/ .codex/ AGENTS.md; tracked package SKILL.md + agents/ + assets/
+  post: commit aae560f pushed main; .codex remains untracked machine-local
+  discovery: .agents/skills/xbrd-sol-ultra/SKILL.md → root SKILL.md
